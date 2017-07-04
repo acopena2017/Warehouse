@@ -8,6 +8,7 @@ import { Http } from '@angular/http';
 export class ItemComponent {
     public items: itemModel[];
     public weight: number = 0;
+    public height: number = 0;
 
     constructor(http: Http, @Inject('ORIGIN_URL') originUrl: string) {
         http.get(originUrl + '/api/Items/GetList').subscribe(result => {
